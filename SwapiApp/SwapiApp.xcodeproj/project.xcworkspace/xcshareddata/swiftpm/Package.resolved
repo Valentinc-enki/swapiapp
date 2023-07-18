@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adeo/enki-design-system-ios",
       "state" : {
-        "revision" : "8ec09399ca2e380773af5a64fc65a9e1d18a2fd1",
-        "version" : "0.5.16"
+        "revision" : "bcccbb45bc65651f22973f8572bd4778297dc3f0",
+        "version" : "0.5.17"
       }
     },
     {

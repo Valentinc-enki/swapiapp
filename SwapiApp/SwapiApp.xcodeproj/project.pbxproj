@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FCD58332A5D407500E8F86C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD58322A5D407500E8F86C /* AppDelegate.swift */; };
-		3FCD58352A5D407500E8F86C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD58342A5D407500E8F86C /* SceneDelegate.swift */; };
-		3FCD58372A5D407500E8F86C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD58362A5D407500E8F86C /* ViewController.swift */; };
-		3FCD583A2A5D407500E8F86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD58382A5D407500E8F86C /* Main.storyboard */; };
+		3F51E8AB2A658ADD00D27E46 /* MockFilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51E8AA2A658ADD00D27E46 /* MockFilmListViewModel.swift */; };
+		3F51E8AE2A66926900D27E46 /* FilmDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51E8AD2A66926900D27E46 /* FilmDetailsView.swift */; };
+		3F5582132A65456400B6CFA0 /* EnkiDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5582122A65456400B6CFA0 /* EnkiDesignSystem */; };
+		3F5582152A656A9800B6CFA0 /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = 3F5582142A656A9800B6CFA0 /* Utils */; };
+		3F5582172A656AFF00B6CFA0 /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5582162A656AFF00B6CFA0 /* Utils */; };
+		3FA170C92A5D8AE7000B38E9 /* SwapiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA170C82A5D8AE7000B38E9 /* SwapiApp.swift */; };
+		3FB81B6F2A65270900DD6158 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB81B6E2A65270900DD6158 /* Data */; };
+		3FB81B712A65270D00DD6158 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB81B702A65270D00DD6158 /* Domain */; };
+		3FB81B792A652EBB00DD6158 /* FilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB81B782A652EBB00DD6158 /* FilmListViewModel.swift */; };
 		3FCD583C2A5D407700E8F86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD583B2A5D407700E8F86C /* Assets.xcassets */; };
-		3FCD583F2A5D407700E8F86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD583D2A5D407700E8F86C /* LaunchScreen.storyboard */; };
 		3FCD584A2A5D407800E8F86C /* SwapiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD58492A5D407800E8F86C /* SwapiAppTests.swift */; };
-		3FCD58642A5D418D00E8F86C /* EnkiDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCD58632A5D418D00E8F86C /* EnkiDesignSystem */; };
 		3FCD58672A5D42B300E8F86C /* Domain in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD58662A5D42B200E8F86C /* Domain */; };
 		3FCD58692A5D455200E8F86C /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD58682A5D455200E8F86C /* Data */; };
+		3FCD586E2A5D5E4D00E8F86C /* FilmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD586D2A5D5E4D00E8F86C /* FilmListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F51E8AA2A658ADD00D27E46 /* MockFilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilmListViewModel.swift; sourceTree = "<group>"; };
+		3F51E8AD2A66926900D27E46 /* FilmDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsView.swift; sourceTree = "<group>"; };
+		3F5582142A656A9800B6CFA0 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Utils; sourceTree = "<group>"; };
+		3FA170C82A5D8AE7000B38E9 /* SwapiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiApp.swift; sourceTree = "<group>"; };
+		3FB81B782A652EBB00DD6158 /* FilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModel.swift; sourceTree = "<group>"; };
 		3FCD582F2A5D407500E8F86C /* SwapiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FCD58322A5D407500E8F86C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FCD58342A5D407500E8F86C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3FCD58362A5D407500E8F86C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FCD58392A5D407500E8F86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FCD583B2A5D407700E8F86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3FCD583E2A5D407700E8F86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FCD58402A5D407700E8F86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FCD58452A5D407800E8F86C /* SwapiAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwapiAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCD58492A5D407800E8F86C /* SwapiAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiAppTests.swift; sourceTree = "<group>"; };
 		3FCD584F2A5D407800E8F86C /* SwapiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwapiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCD58662A5D42B200E8F86C /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		3FCD58682A5D455200E8F86C /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
+		3FCD586D2A5D5E4D00E8F86C /* FilmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FCD58642A5D418D00E8F86C /* EnkiDesignSystem in Frameworks */,
+				3F5582132A65456400B6CFA0 /* EnkiDesignSystem in Frameworks */,
+				3FB81B712A65270D00DD6158 /* Domain in Frameworks */,
+				3F5582172A656AFF00B6CFA0 /* Utils in Frameworks */,
+				3FB81B6F2A65270900DD6158 /* Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +86,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FB81B6D2A65270900DD6158 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FCD58262A5D407500E8F86C = {
 			isa = PBXGroup;
 			children = (
 				3FCD58312A5D407500E8F86C /* SwapiApp */,
 				3FCD58482A5D407800E8F86C /* SwapiAppTests */,
 				3FCD58302A5D407500E8F86C /* Products */,
+				3FB81B6D2A65270900DD6158 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,15 +116,13 @@
 		3FCD58312A5D407500E8F86C /* SwapiApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F5582142A656A9800B6CFA0 /* Utils */,
 				3FCD58682A5D455200E8F86C /* Data */,
 				3FCD58662A5D42B200E8F86C /* Domain */,
-				3FCD58322A5D407500E8F86C /* AppDelegate.swift */,
-				3FCD58342A5D407500E8F86C /* SceneDelegate.swift */,
-				3FCD58362A5D407500E8F86C /* ViewController.swift */,
-				3FCD58382A5D407500E8F86C /* Main.storyboard */,
+				3FCD586A2A5D4C5900E8F86C /* Scenes */,
 				3FCD583B2A5D407700E8F86C /* Assets.xcassets */,
-				3FCD583D2A5D407700E8F86C /* LaunchScreen.storyboard */,
 				3FCD58402A5D407700E8F86C /* Info.plist */,
+				3FA170C82A5D8AE7000B38E9 /* SwapiApp.swift */,
 			);
 			path = SwapiApp;
 			sourceTree = "<group>";
@@ -119,6 +133,33 @@
 				3FCD58492A5D407800E8F86C /* SwapiAppTests.swift */,
 			);
 			path = SwapiAppTests;
+			sourceTree = "<group>";
+		};
+		3FCD586A2A5D4C5900E8F86C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3FCD586C2A5D4C7000E8F86C /* FilmDetails */,
+				3FCD586B2A5D4C6400E8F86C /* FilmList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3FCD586B2A5D4C6400E8F86C /* FilmList */ = {
+			isa = PBXGroup;
+			children = (
+				3FCD586D2A5D5E4D00E8F86C /* FilmListView.swift */,
+				3FB81B782A652EBB00DD6158 /* FilmListViewModel.swift */,
+				3F51E8AA2A658ADD00D27E46 /* MockFilmListViewModel.swift */,
+			);
+			path = FilmList;
+			sourceTree = "<group>";
+		};
+		3FCD586C2A5D4C7000E8F86C /* FilmDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3F51E8AD2A66926900D27E46 /* FilmDetailsView.swift */,
+			);
+			path = FilmDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +179,10 @@
 			);
 			name = SwapiApp;
 			packageProductDependencies = (
-				3FCD58632A5D418D00E8F86C /* EnkiDesignSystem */,
+				3FB81B6E2A65270900DD6158 /* Data */,
+				3FB81B702A65270D00DD6158 /* Domain */,
+				3F5582122A65456400B6CFA0 /* EnkiDesignSystem */,
+				3F5582162A656AFF00B6CFA0 /* Utils */,
 			);
 			productName = SwapiApp;
 			productReference = 3FCD582F2A5D407500E8F86C /* SwapiApp.app */;
@@ -213,7 +257,7 @@
 			);
 			mainGroup = 3FCD58262A5D407500E8F86C;
 			packageReferences = (
-				3FCD58622A5D418D00E8F86C /* XCRemoteSwiftPackageReference "enki-design-system-ios" */,
+				3F5582112A65456400B6CFA0 /* XCRemoteSwiftPackageReference "enki-design-system-ios" */,
 			);
 			productRefGroup = 3FCD58302A5D407500E8F86C /* Products */;
 			projectDirPath = "";
@@ -231,11 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FCD583F2A5D407700E8F86C /* LaunchScreen.storyboard in Resources */,
 				3FCD583C2A5D407700E8F86C /* Assets.xcassets in Resources */,
 				3FCD58692A5D455200E8F86C /* Data in Resources */,
+				3F5582152A656A9800B6CFA0 /* Utils in Resources */,
 				3FCD58672A5D42B300E8F86C /* Domain in Resources */,
-				3FCD583A2A5D407500E8F86C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FCD58372A5D407500E8F86C /* ViewController.swift in Sources */,
-				3FCD58332A5D407500E8F86C /* AppDelegate.swift in Sources */,
-				3FCD58352A5D407500E8F86C /* SceneDelegate.swift in Sources */,
+				3F51E8AB2A658ADD00D27E46 /* MockFilmListViewModel.swift in Sources */,
+				3F51E8AE2A66926900D27E46 /* FilmDetailsView.swift in Sources */,
+				3FA170C92A5D8AE7000B38E9 /* SwapiApp.swift in Sources */,
+				3FB81B792A652EBB00DD6158 /* FilmListViewModel.swift in Sources */,
+				3FCD586E2A5D5E4D00E8F86C /* FilmListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +340,6 @@
 			targetProxy = 3FCD58502A5D407800E8F86C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3FCD58382A5D407500E8F86C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FCD58392A5D407500E8F86C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3FCD583D2A5D407700E8F86C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FCD583E2A5D407700E8F86C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3FCD58572A5D407800E8F86C /* Debug */ = {
@@ -440,8 +466,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwapiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -467,8 +491,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwapiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -598,21 +620,33 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3FCD58622A5D418D00E8F86C /* XCRemoteSwiftPackageReference "enki-design-system-ios" */ = {
+		3F5582112A65456400B6CFA0 /* XCRemoteSwiftPackageReference "enki-design-system-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adeo/enki-design-system-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.16;
+				minimumVersion = 0.5.17;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3FCD58632A5D418D00E8F86C /* EnkiDesignSystem */ = {
+		3F5582122A65456400B6CFA0 /* EnkiDesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3FCD58622A5D418D00E8F86C /* XCRemoteSwiftPackageReference "enki-design-system-ios" */;
+			package = 3F5582112A65456400B6CFA0 /* XCRemoteSwiftPackageReference "enki-design-system-ios" */;
 			productName = EnkiDesignSystem;
+		};
+		3F5582162A656AFF00B6CFA0 /* Utils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utils;
+		};
+		3FB81B6E2A65270900DD6158 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		3FB81B702A65270D00DD6158 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
