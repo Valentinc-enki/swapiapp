@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import Domain
+
+class MockFilmDetailsViewModel: FilmDetailsViewModelProtocol {
+    
+    var film: Film
+    
+    init(film: Film) {
+        self.film = film
+    }
+}

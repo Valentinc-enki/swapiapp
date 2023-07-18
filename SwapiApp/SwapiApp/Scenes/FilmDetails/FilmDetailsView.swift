@@ -6,15 +6,38 @@
 //
 
 import SwiftUI
+import Domain
+import EnkiDesignSystem
 
-struct FilmDetailsView: View {
+struct FilmDetailsView<ViewModel>: View where ViewModel: FilmDetailsViewModelProtocol {
+    
+    @StateObject var viewModel: ViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(viewModel.film.title)
+                .enkiFont(.titleLarge)
+                .enkiForegroundColor(.foreground(.primary))
+                .multilineTextAlignment(.center)
+                .padding(.top, 50)
+            
+            Spacer()
+            
+            ScrollView {
+                Text(viewModel.film.openingCrawl)
+                    .enkiFont(.bodyMedium)
+                    .enkiForegroundColor(.foreground(.primary))
+                    .multilineTextAlignment(.center)
+                    .padding()
+            }
+            
+            Spacer()
+        }
     }
 }
 
 struct FilmDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        FilmDetailsView()
+        FilmDetailsView(viewModel: MockFilmDetailsViewModel(film: Film.Mock.film1))
     }
 }

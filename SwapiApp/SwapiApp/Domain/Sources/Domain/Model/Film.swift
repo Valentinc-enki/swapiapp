@@ -8,7 +8,7 @@
 import Foundation
 import Data
 
-public struct Film {
+public struct Film: Hashable {
     
     public let id: Int
     public let title: String

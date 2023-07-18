@@ -11,8 +11,10 @@ import EnkiDesignSystem
 import Utils
 
 struct FilmListView<ViewModel>: View where ViewModel: FilmListViewModelProtocol {
-
-    @StateObject var viewModel: ViewModel
+    
+    @StateObject private var viewModel: ViewModel
+    
+    @State private var path = NavigationPath()
     
     var body: some View {
         EnkiNavigationView {
@@ -22,21 +24,15 @@ struct FilmListView<ViewModel>: View where ViewModel: FilmListViewModelProtocol 
             case .loading:
                 ProgressView()
             case .failed:
-                Image(systemName: "exclamationmark.circle.fill")
-                    .font(.system(size: 64))
-                    .foregroundColor(.red)
-                Text("Request Failed")
-                    .font(.headline)
-                    .foregroundColor(.red)
+                errorView()
             }
-            
         }.onAppear() {
             viewModel.onAppear()
         }
     }
     
     // MARK: Init
-
+    
     init(viewModel: ViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -44,14 +40,29 @@ struct FilmListView<ViewModel>: View where ViewModel: FilmListViewModelProtocol 
     func loadedView(films: [Film]) -> some View {
         EnkiList {
             ForEach(films, id: \.id) { film in
-                SwiftUI.Button {
-                    print("didClick on \(film.title)")
+                Button {
+                    path.append(film)
                 } label: {
                     RightChevronCell {
                         LabelCell(label: "\(film.id). \(film.title)")
                     }
                 }
             }
+        }
+        .navigationDestination(for: Film.self) { film in
+            let detailsViewModel = FilmDetailsViewModel(film: film)
+            FilmDetailsView(viewModel: detailsViewModel)
+        }
+    }
+    
+    func errorView() -> some View {
+        VStack {
+            Image(systemName: "exclamationmark.circle.fill")
+                .font(.system(size: 64))
+                .foregroundColor(.red)
+            Text("Request Failed")
+                .font(.headline)
+                .foregroundColor(.red)
         }
     }
 }
