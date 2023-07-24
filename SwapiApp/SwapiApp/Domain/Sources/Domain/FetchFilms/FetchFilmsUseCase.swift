@@ -17,7 +17,7 @@ public protocol FetchFilmsUseCaseProtocol {
 public struct FetchFilmsUseCase: FetchFilmsUseCaseProtocol {
     
     public func perform() async throws -> [Film] {
-        try await NetworkRepository.getFilms().toFilms()
+        try await NetworkRepository().getFilms().toFilms()
     }
 }
 

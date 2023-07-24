@@ -15,6 +15,18 @@ struct FilmDetailsView<ViewModel>: View where ViewModel: FilmDetailsViewModelPro
     
     var body: some View {
         VStack {
+            Button(action: {
+                viewModel.onFavoritesClicked()
+            }) {
+                if viewModel.film.isFavorite {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                } else {
+                    Image(systemName: "heart")
+                        .foregroundColor(.gray)
+                }
+            }
+            
             Text(viewModel.film.title)
                 .enkiFont(.titleLarge)
                 .enkiForegroundColor(.foreground(.primary))

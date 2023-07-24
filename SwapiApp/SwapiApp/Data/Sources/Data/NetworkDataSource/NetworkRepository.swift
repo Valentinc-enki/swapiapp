@@ -9,13 +9,22 @@ import Foundation
 
 public protocol NetworkRepositoryProtocol {
     
-    static func getFilms() async throws -> GetFilmsResponse
+    func getFilms() async throws -> GetFilmsResponse
 }
 
 public struct NetworkRepository: NetworkRepositoryProtocol {
     
-    public static func getFilms() async throws -> GetFilmsResponse {
-        try await NetworkDataSource()
-                    .getFilms()
+    private let dataSource: NetworkDataSource
+
+    public init() {
+        self.dataSource = NetworkDataSource()
+    }
+    
+    init(dataSource: NetworkDataSource) {
+        self.dataSource = dataSource
+    }
+    
+    public func getFilms() async throws -> GetFilmsResponse {
+        try await dataSource.getFilms()
     }
 }
