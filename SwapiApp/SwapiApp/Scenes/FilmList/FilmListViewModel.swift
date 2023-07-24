@@ -12,6 +12,7 @@ import Utils
 protocol FilmListViewModelProtocol: ObservableObject {
     
     var loadingState: LoadingState<[Film]> { get }
+    var selectedFilm: Film? { get set }
     
     func onAppear()
 }
@@ -31,6 +32,8 @@ final class FilmListViewModel: FilmListViewModelProtocol {
             }
         }
     }
+    
+    var selectedFilm: Film?
     
     @Injected(\.fetchFilmUseCase)
     private var fetchFilmsUseCase: FetchFilmsUseCaseProtocol

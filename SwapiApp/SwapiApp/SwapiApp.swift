@@ -13,7 +13,7 @@ struct SwapiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            FilmListView(viewModel: FilmListViewModel())
+            MainCoordinatorView()
         }
     }
 }

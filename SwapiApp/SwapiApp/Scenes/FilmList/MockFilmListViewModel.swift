@@ -11,6 +11,7 @@ import Utils
 
 final class MockFilmListViewModel: FilmListViewModelProtocol {
     
+    var selectedFilm: Film?
     var loadingState: LoadingState<[Film]> = .loading
     
     init(filmsCards: [Film]) {
