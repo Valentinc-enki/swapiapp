@@ -10,6 +10,7 @@
 		3F33ED212A6EBD4E00F98D09 /* FilmsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33ED202A6EBD4E00F98D09 /* FilmsTabView.swift */; };
 		3F33ED232A6EBD5D00F98D09 /* FavoritesFilmsTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33ED222A6EBD5D00F98D09 /* FavoritesFilmsTabview.swift */; };
 		3F33ED252A6EBFDB00F98D09 /* FilmSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33ED242A6EBFDB00F98D09 /* FilmSource.swift */; };
+		3F33ED272A6FD23B00F98D09 /* .swiftlint in Resources */ = {isa = PBXBuildFile; fileRef = 3F33ED262A6FD23B00F98D09 /* .swiftlint */; };
 		3F51E8AB2A658ADD00D27E46 /* MockFilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51E8AA2A658ADD00D27E46 /* MockFilmListViewModel.swift */; };
 		3F51E8AE2A66926900D27E46 /* FilmDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51E8AD2A66926900D27E46 /* FilmDetailsView.swift */; };
 		3F51E8B02A66AFEA00D27E46 /* FilmDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F51E8AF2A66AFEA00D27E46 /* FilmDetailsViewModel.swift */; };
@@ -50,6 +51,7 @@
 		3F33ED202A6EBD4E00F98D09 /* FilmsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTabView.swift; sourceTree = "<group>"; };
 		3F33ED222A6EBD5D00F98D09 /* FavoritesFilmsTabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFilmsTabview.swift; sourceTree = "<group>"; };
 		3F33ED242A6EBFDB00F98D09 /* FilmSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSource.swift; sourceTree = "<group>"; };
+		3F33ED262A6FD23B00F98D09 /* .swiftlint */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint; sourceTree = "<group>"; };
 		3F51E8AA2A658ADD00D27E46 /* MockFilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilmListViewModel.swift; sourceTree = "<group>"; };
 		3F51E8AD2A66926900D27E46 /* FilmDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsView.swift; sourceTree = "<group>"; };
 		3F51E8AF2A66AFEA00D27E46 /* FilmDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				3FCD583B2A5D407700E8F86C /* Assets.xcassets */,
 				3FCD58402A5D407700E8F86C /* Info.plist */,
 				3FA170C82A5D8AE7000B38E9 /* SwapiApp.swift */,
+				3F33ED262A6FD23B00F98D09 /* .swiftlint */,
 			);
 			path = SwapiApp;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				3FCD582B2A5D407500E8F86C /* Sources */,
 				3FCD582C2A5D407500E8F86C /* Frameworks */,
 				3FCD582D2A5D407500E8F86C /* Resources */,
+				3F5825482A6FFECA00C28D87 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -295,6 +299,7 @@
 			files = (
 				3FCD583C2A5D407700E8F86C /* Assets.xcassets in Resources */,
 				3FCD58692A5D455200E8F86C /* Data in Resources */,
+				3F33ED272A6FD23B00F98D09 /* .swiftlint in Resources */,
 				3F5582152A656A9800B6CFA0 /* Utils in Resources */,
 				3FCD58672A5D42B300E8F86C /* Domain in Resources */,
 			);
@@ -315,6 +320,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F5825482A6FFECA00C28D87 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FCD582B2A5D407500E8F86C /* Sources */ = {

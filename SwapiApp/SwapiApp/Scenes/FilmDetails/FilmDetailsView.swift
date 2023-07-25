@@ -10,41 +10,39 @@ import Domain
 import EnkiDesignSystem
 
 struct FilmDetailsView<ViewModel>: View where ViewModel: FilmDetailsViewModelProtocol {
-    
+
     @StateObject var viewModel: ViewModel
-    
+
     var body: some View {
-        VStack {
-            Button(action: {
-                viewModel.onFavoritesClicked()
-            }) {
-                if viewModel.film.isFavorite {
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                } else {
-                    Image(systemName: "heart")
-                        .foregroundColor(.gray)
-                }
+        Button(action: {
+            viewModel.onFavoritesClicked()
+        }) {
+            if viewModel.film.isFavorite {
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.red)
+            } else {
+                Image(systemName: "heart")
+                    .foregroundColor(.gray)
             }
-            
-            Text(viewModel.film.title)
-                .enkiFont(.titleLarge)
+        }
+
+        Text(viewModel.film.title)
+            .enkiFont(.titleLarge)
+            .enkiForegroundColor(.foreground(.primary))
+            .multilineTextAlignment(.center)
+            .enkiPadding(.top, distance: MagicUnit.mu050)
+
+        Spacer()
+
+        ScrollView {
+            Text(viewModel.film.openingCrawl)
+                .enkiFont(.bodyMedium)
                 .enkiForegroundColor(.foreground(.primary))
                 .multilineTextAlignment(.center)
-                .padding(.top, 50)
-            
-            Spacer()
-            
-            ScrollView {
-                Text(viewModel.film.openingCrawl)
-                    .enkiFont(.bodyMedium)
-                    .enkiForegroundColor(.foreground(.primary))
-                    .multilineTextAlignment(.center)
-                    .padding()
-            }
-            
-            Spacer()
+                .padding()
         }
+
+        Spacer()
     }
 }
 

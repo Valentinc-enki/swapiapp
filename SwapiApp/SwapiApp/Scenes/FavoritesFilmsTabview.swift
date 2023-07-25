@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct FavoritesFilmsTabView: View {
-    
+
     var body: some View {
         MainCoordinatorView(source: .local)
     }

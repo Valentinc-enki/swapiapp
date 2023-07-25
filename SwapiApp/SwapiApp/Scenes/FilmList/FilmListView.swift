@@ -12,11 +12,11 @@ import Utils
 import NavigationBackport
 
 struct FilmListView<ViewModel>: View where ViewModel: FilmListViewModelProtocol {
-    
+
     @StateObject private var viewModel: ViewModel
-    
+
     var onFilmSelected: (Film) -> Void
-    
+
     var body: some View {
         EnkiNavigationView {
             switch viewModel.loadingState {
@@ -25,22 +25,33 @@ struct FilmListView<ViewModel>: View where ViewModel: FilmListViewModelProtocol 
             case .loading:
                 Spinner()
             case .failed:
-                errorView()
+                errorView
             }
         }
-        .onAppear() {
+        .onAppear {
             viewModel.onAppear()
         }
     }
-    
+
+    var errorView: some View {
+        VStack {
+            Image(systemName: "exclamationmark.circle.fill")
+                .font(.system(size: 64))
+                .foregroundColor(.red)
+            Text("Request Failed")
+                .font(.headline)
+                .foregroundColor(.red)
+        }
+    }
+
     // MARK: Init
-    
+
     init(viewModel: ViewModel,
          onFilmSelected: @escaping (Film) -> Void) {
         self._viewModel = StateObject(wrappedValue: viewModel)
         self.onFilmSelected = onFilmSelected
     }
-    
+
     func loadedView(films: [Film]) -> some View {
         EnkiList {
             ForEach(films, id: \.id) { film in
@@ -53,18 +64,6 @@ struct FilmListView<ViewModel>: View where ViewModel: FilmListViewModelProtocol 
                 }
             }
         }
-        
-    }
-    
-    func errorView() -> some View {
-        VStack {
-            Image(systemName: "exclamationmark.circle.fill")
-                .font(.system(size: 64))
-                .foregroundColor(.red)
-            Text("Request Failed")
-                .font(.headline)
-                .foregroundColor(.red)
-        }
     }
 }
 
@@ -75,8 +74,7 @@ struct FilmListView_Previews: PreviewProvider {
         EnkiNavigationView {
             FilmListView(viewModel: MockFilmListViewModel(filmsCards: [Film.Mock.film1,
                                                                        Film.Mock.film2,
-                                                                       Film.Mock.film3])) {
-                film in
+                                                                       Film.Mock.film3])) { film in
                 print("\(film.title) selected")
             }
         }

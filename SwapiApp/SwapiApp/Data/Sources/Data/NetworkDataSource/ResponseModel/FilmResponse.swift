@@ -8,6 +8,7 @@
 import Foundation
 
 public struct FilmResponse: Decodable {
+    
     public let episodeID: Int
     public let title: String
     public let openingCrawl: String
@@ -42,21 +43,21 @@ public struct FilmResponse: Decodable {
 }
 
 extension FilmResponse: Equatable {
-    
+
     public static func == (lhs: FilmResponse, rhs: FilmResponse) -> Bool {
         return lhs.episodeID == rhs.episodeID &&
-            lhs.title == rhs.title &&
-            lhs.openingCrawl == rhs.openingCrawl &&
-            lhs.director == rhs.director &&
-            lhs.producer == rhs.producer &&
-            lhs.releaseDate == rhs.releaseDate &&
-            lhs.characters == rhs.characters &&
-            lhs.planets == rhs.planets &&
-            lhs.starships == rhs.starships &&
-            lhs.vehicles == rhs.vehicles &&
-            lhs.species == rhs.species &&
-            lhs.created == rhs.created &&
-            lhs.edited == rhs.edited &&
-            lhs.url == rhs.url
+                lhs.title == rhs.title &&
+                lhs.openingCrawl == rhs.openingCrawl &&
+                lhs.director == rhs.director &&
+                lhs.producer == rhs.producer &&
+                lhs.releaseDate == rhs.releaseDate &&
+                lhs.characters == rhs.characters &&
+                lhs.planets == rhs.planets &&
+                lhs.starships == rhs.starships &&
+                lhs.vehicles == rhs.vehicles &&
+                lhs.species == rhs.species &&
+                lhs.created == rhs.created &&
+                lhs.edited == rhs.edited &&
+                lhs.url == rhs.url
     }
 }

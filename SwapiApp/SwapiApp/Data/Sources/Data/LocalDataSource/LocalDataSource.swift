@@ -6,6 +6,7 @@ protocol LocalDataSourceProtocol {
     func removeFavoriteFilm(_ film: LocalFilm)
     func getFavoriteFilms() -> [LocalFilm]
     func saveFavoriteFilms(_ favoriteFilms: [LocalFilm])
+    func isFavorite(filmId: Int) -> Bool
 }
 
 struct LocalDataSource: LocalDataSourceProtocol {
@@ -40,5 +41,9 @@ struct LocalDataSource: LocalDataSourceProtocol {
         if let data = try? JSONEncoder().encode(favoriteFilms) {
             UserDefaults.standard.set(data, forKey: key)
         }
+    }
+    
+    public func isFavorite(filmId: Int) -> Bool {
+        getFavoriteFilms().contains(where: { $0.id == filmId })
     }
 }

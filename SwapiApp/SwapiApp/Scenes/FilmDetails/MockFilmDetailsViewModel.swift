@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-class MockFilmDetailsViewModel: FilmDetailsViewModelProtocol {
+final class MockFilmDetailsViewModel: FilmDetailsViewModelProtocol {
     
     var film: Film
     

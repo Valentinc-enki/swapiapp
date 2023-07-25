@@ -7,7 +7,15 @@
 
 import Foundation
 
-public struct LocalRepository {
+protocol LocalRepositoryProtocol {
+    
+    func saveFavoriteFilm(_ film: LocalFilm)
+    func removeFavoriteFilm(_ film: LocalFilm)
+    func getFavoriteFilms() -> [LocalFilm]
+    func isFavorite(filmId: Int) -> Bool
+}
+
+public struct LocalRepository: LocalRepositoryProtocol {
     
     private let dataSource: LocalDataSourceProtocol
 
@@ -28,6 +36,10 @@ public struct LocalRepository {
     }
 
     public func getFavoriteFilms() -> [LocalFilm] {
-        return dataSource.getFavoriteFilms()
+        dataSource.getFavoriteFilms()
+    }
+    
+    public func isFavorite(filmId: Int) -> Bool {
+        dataSource.isFavorite(filmId: filmId)
     }
 }
