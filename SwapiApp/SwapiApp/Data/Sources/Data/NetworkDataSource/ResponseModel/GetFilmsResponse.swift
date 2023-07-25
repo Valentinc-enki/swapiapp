@@ -15,7 +15,7 @@ public struct GetFilmsResponse: Decodable {
 }
 
 extension GetFilmsResponse: Equatable {
-    
+
     public static func == (lhs: GetFilmsResponse, rhs: GetFilmsResponse) -> Bool {
         return lhs.count == rhs.count &&
             lhs.next == rhs.next &&

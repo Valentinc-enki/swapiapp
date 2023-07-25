@@ -10,14 +10,14 @@ import Domain
 import Utils
 
 final class MockFilmListViewModel: FilmListViewModelProtocol {
-    
-    var source: FilmSource
-    var loadingState: LoadingState<[Film]> = .loading
-    
-    init(filmsCards: [Film]) {
-        self.loadingState = .loaded(filmsCards)
-        self.source = .network
-    }
-    
-    func onAppear() { }
+
+	var source: FilmSource
+	var loadingState: LoadingState<[Film]> = .loading
+
+	init(filmsCards: [Film]) {
+		self.loadingState = .loaded(filmsCards)
+		self.source = .network
+	}
+
+	func onAppear() { }
 }

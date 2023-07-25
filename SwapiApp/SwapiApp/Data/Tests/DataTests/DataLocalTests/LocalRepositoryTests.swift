@@ -68,9 +68,9 @@ class LocalRepositoryTests: XCTestCase {
 
 // MockLocalDataSource class to simulate LocalDataSource for testing
 class MockLocalDataSource: LocalDataSourceProtocol {
-    
+
     var favoriteFilms: [LocalFilm] = []
-    
+
     func saveFavoriteFilms(_ favoriteFilms: [LocalFilm]) {
         self.favoriteFilms = favoriteFilms
     }
@@ -86,4 +86,8 @@ class MockLocalDataSource: LocalDataSourceProtocol {
     func getFavoriteFilms() -> [LocalFilm] {
         return favoriteFilms
     }
+
+	func isFavorite(filmId: Int) -> Bool {
+		favoriteFilms.contains { $0.id == filmId }
+	}
 }

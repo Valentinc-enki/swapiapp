@@ -10,26 +10,26 @@ import Data
 import Utils
 
 public protocol SaveFavoritesFilmsUseCaseProtocol {
-    
-    func perform(film: Film)
+
+	func perform(film: Film)
 }
 
 public struct SaveFavoritesFilmsUseCase: SaveFavoritesFilmsUseCaseProtocol {
-    
-    public func perform(film: Film) {
-        LocalRepository().saveFavoriteFilm(film.toLocalFilm())
-    }
+
+	public func perform(film: Film) {
+		LocalRepository().saveFavoriteFilm(film.toLocalFilm())
+	}
 }
 
 extension InjectedValues {
- 
-    private struct SaveFavoritesFilmsUseCaseKey: InjectionKey {
-        
-        static var currentValue: SaveFavoritesFilmsUseCaseProtocol = SaveFavoritesFilmsUseCase()
-    }
-    
-    public var saveFavoritesFilmsUseCase: SaveFavoritesFilmsUseCaseProtocol {
-        get { Self[SaveFavoritesFilmsUseCaseKey.self] }
-        set { Self[SaveFavoritesFilmsUseCaseKey.self] = newValue }
-    }
+
+	private struct SaveFavoritesFilmsUseCaseKey: InjectionKey {
+
+		static var currentValue: SaveFavoritesFilmsUseCaseProtocol = SaveFavoritesFilmsUseCase()
+	}
+
+	public var saveFavoritesFilmsUseCase: SaveFavoritesFilmsUseCaseProtocol {
+		get { Self[SaveFavoritesFilmsUseCaseKey.self] }
+		set { Self[SaveFavoritesFilmsUseCaseKey.self] = newValue }
+	}
 }

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct FilmsTabView: View {
-    
+
     var body: some View {
         MainCoordinatorView(source: .network)
     }

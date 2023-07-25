@@ -14,17 +14,17 @@ struct FilmDetailsView<ViewModel>: View where ViewModel: FilmDetailsViewModelPro
     @StateObject var viewModel: ViewModel
 
     var body: some View {
-        Button(action: {
-            viewModel.onFavoritesClicked()
-        }) {
-            if viewModel.film.isFavorite {
-                Image(systemName: "heart.fill")
-                    .foregroundColor(.red)
-            } else {
-                Image(systemName: "heart")
-                    .foregroundColor(.gray)
-            }
-        }
+		Button {
+			viewModel.onFavoritesClicked()
+		} label: {
+			if viewModel.film.isFavorite {
+				Image(systemName: "heart.fill")
+					.foregroundColor(.red)
+			} else {
+				Image(systemName: "heart")
+					.foregroundColor(.gray)
+			}
+		}
 
         Text(viewModel.film.title)
             .enkiFont(.titleLarge)
@@ -39,7 +39,7 @@ struct FilmDetailsView<ViewModel>: View where ViewModel: FilmDetailsViewModelPro
                 .enkiFont(.bodyMedium)
                 .enkiForegroundColor(.foreground(.primary))
                 .multilineTextAlignment(.center)
-                .padding()
+				.enkiPadding([.leading, .trailing], distance: MagicUnit.mu050)
         }
 
         Spacer()
