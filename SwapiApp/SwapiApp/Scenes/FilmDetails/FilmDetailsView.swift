@@ -48,8 +48,12 @@ struct FilmDetailsView<ViewModel>: View where ViewModel: FilmDetailsViewModelPro
     }
 }
 
+#if DEBUG
+
 struct FilmDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         FilmDetailsView(viewModel: MockFilmDetailsViewModel(film: Film.Mock.film1))
     }
 }
+
+#endif

@@ -18,11 +18,12 @@ struct MainCoordinatorView: View {
     }
     
     @State private var path = [MainCoordinatorView.Scene]()
+    var source: FilmSource
     
     var body: some View {
         EnkiNavigationView(path: $path) {
             ZStack {
-                FilmListView(viewModel: FilmListViewModel()) { film in
+                FilmListView(viewModel: FilmListViewModel(source: source)) { film in
                     path.append(.details(film))
                 }
             }
@@ -32,12 +33,16 @@ struct MainCoordinatorView: View {
         }
     }
     
+    init(source: FilmSource) {
+        self.source = source
+    }
+    
     @ViewBuilder
     func getSceneView(for scene: MainCoordinatorView.Scene) -> some View {
         switch scene {
         case .list:
             AnyView(
-                FilmListView(viewModel: FilmListViewModel()) { film in
+                FilmListView(viewModel: FilmListViewModel(source: source)) { film in
                     path.append(.details(film))
                 }
             )
@@ -49,6 +54,6 @@ struct MainCoordinatorView: View {
 
 struct MainCoordinatorView_Previews: PreviewProvider {
     static var previews: some View {
-        MainCoordinatorView()
+        MainCoordinatorView(source: .local)
     }
 }

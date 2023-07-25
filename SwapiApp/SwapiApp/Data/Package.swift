@@ -25,6 +25,10 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "DataTests",
-            dependencies: ["Data"]),
+            dependencies: ["Data"],
+            resources: [
+                .copy("Resources/Mock+GetFilms.json")
+            ]
+        ),
     ]
 )

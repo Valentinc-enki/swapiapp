@@ -10,10 +10,22 @@ import SwiftUI
 
 @main
 struct SwapiApp: App {
-
+    
     var body: some Scene {
         WindowGroup {
-            MainCoordinatorView()
+            TabView {
+                FilmsTabView()
+                    .tabItem {
+                        Image(systemName: "film")
+                        Text("Films")
+                    }
+                
+                FavoritesFilmsTabView()
+                    .tabItem {
+                        Image(systemName: "heart.fill")
+                        Text("Favorites")
+                    }
+            }
         }
     }
 }

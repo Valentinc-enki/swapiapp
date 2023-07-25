@@ -1,0 +1,39 @@
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "episode_id": 1,
+            "title": "A New Hope",
+            "opening_crawl": "It is a period of civil war...",
+            "director": "George Lucas",
+            "producer": "Gary Kurtz, Rick McCallum",
+            "release_date": "1977-05-25",
+            "characters": [],
+            "planets": [],
+            "starships": [],
+            "vehicles": [],
+            "species": [],
+            "created": "2023-07-24",
+            "edited": "2023-07-24",
+            "url": "https://swapi.dev/api/films/1/"
+        },
+        {
+            "episode_id": 2,
+            "title": "The Empire Strikes Back",
+            "opening_crawl": "It is a dark time for the Rebellion...",
+            "director": "Irvin Kershner",
+            "producer": "Gary Kurtz, Rick McCallum",
+            "release_date": "1980-05-17",
+            "characters": [],
+            "planets": [],
+            "starships": [],
+            "vehicles": [],
+            "species": [],
+            "created": "2023-07-24",
+            "edited": "2023-07-24",
+            "url": "https://swapi.dev/api/films/2/"
+        }
+    ]
+}

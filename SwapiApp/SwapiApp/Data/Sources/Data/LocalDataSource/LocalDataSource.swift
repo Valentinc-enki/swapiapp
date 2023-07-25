@@ -1,6 +1,14 @@
 import Foundation
 
-class LocalDataSource {
+protocol LocalDataSourceProtocol {
+    
+    func saveFavoriteFilm(_ film: LocalFilm)
+    func removeFavoriteFilm(_ film: LocalFilm)
+    func getFavoriteFilms() -> [LocalFilm]
+    func saveFavoriteFilms(_ favoriteFilms: [LocalFilm])
+}
+
+struct LocalDataSource: LocalDataSourceProtocol {
     
     private let key = "favoriteFilms"
 
@@ -28,7 +36,7 @@ class LocalDataSource {
         return []
     }
 
-    private func saveFavoriteFilms(_ favoriteFilms: [LocalFilm]) {
+    public func saveFavoriteFilms(_ favoriteFilms: [LocalFilm]) {
         if let data = try? JSONEncoder().encode(favoriteFilms) {
             UserDefaults.standard.set(data, forKey: key)
         }

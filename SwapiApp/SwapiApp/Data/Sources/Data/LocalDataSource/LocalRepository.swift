@@ -9,13 +9,13 @@ import Foundation
 
 public struct LocalRepository {
     
-    private let dataSource: LocalDataSource
+    private let dataSource: LocalDataSourceProtocol
 
     public init() {
         self.dataSource = LocalDataSource()
     }
     
-    init(dataSource: LocalDataSource) {
+    init(dataSource: LocalDataSourceProtocol) {
         self.dataSource = dataSource
     }
 

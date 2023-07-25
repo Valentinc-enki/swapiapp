@@ -13,3 +13,14 @@ public struct GetFilmsResponse: Decodable {
     public let previous: String?
     public let results: [FilmResponse]
 }
+
+extension GetFilmsResponse: Equatable {
+    // Implementing the Equatable protocol
+    public static func == (lhs: GetFilmsResponse, rhs: GetFilmsResponse) -> Bool {
+        // Compare all the properties to determine equality
+        return lhs.count == rhs.count &&
+            lhs.next == rhs.next &&
+            lhs.previous == rhs.previous &&
+            lhs.results == rhs.results
+    }
+}

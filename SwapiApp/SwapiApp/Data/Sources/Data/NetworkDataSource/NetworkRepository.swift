@@ -14,13 +14,13 @@ public protocol NetworkRepositoryProtocol {
 
 public struct NetworkRepository: NetworkRepositoryProtocol {
     
-    private let dataSource: NetworkDataSource
+    private let dataSource: NetworkDataSourceProtocol
 
     public init() {
         self.dataSource = NetworkDataSource()
     }
     
-    init(dataSource: NetworkDataSource) {
+    init(dataSource: NetworkDataSourceProtocol) {
         self.dataSource = dataSource
     }
     

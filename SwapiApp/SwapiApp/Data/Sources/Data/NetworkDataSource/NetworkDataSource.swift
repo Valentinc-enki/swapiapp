@@ -2,7 +2,12 @@ import Foundation
 
 let baseUrl = "https://swapi.dev/api"
 
-public struct NetworkDataSource {
+protocol NetworkDataSourceProtocol {
+    
+    func getFilms() async throws -> GetFilmsResponse
+}
+
+public struct NetworkDataSource: NetworkDataSourceProtocol {
     
     enum NetworkError: Error {
         case invalidURL
@@ -11,7 +16,15 @@ public struct NetworkDataSource {
         case invalidData
     }
     
-    public init() { }
+    let session: URLSession
+    
+    init(session: URLSession) {
+        self.session = session
+    }
+    
+    public init() {
+        self.session = URLSession.shared
+    }
     
     public func getFilms() async throws -> GetFilmsResponse {
         let suffixUrl = "/films"
@@ -20,11 +33,7 @@ public struct NetworkDataSource {
         guard let url = URL(string: urlString) else {
             throw NetworkError.invalidURL
         }
-        let sessionConfig = URLSessionConfiguration.default
-        // Not needed, test purpose only for error display
-        sessionConfig.timeoutIntervalForRequest = 30
         
-        let session = URLSession(configuration: sessionConfig)
         let (data, response) = try await session.data(from: url)
         
         guard let httpResponse = response as? HTTPURLResponse else {

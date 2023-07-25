@@ -11,11 +11,12 @@ import Utils
 
 final class MockFilmListViewModel: FilmListViewModelProtocol {
     
-    var selectedFilm: Film?
+    var source: FilmSource
     var loadingState: LoadingState<[Film]> = .loading
     
     init(filmsCards: [Film]) {
         self.loadingState = .loaded(filmsCards)
+        self.source = .network
     }
     
     func onAppear() { }
